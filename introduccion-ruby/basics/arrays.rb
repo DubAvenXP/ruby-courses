@@ -4,16 +4,18 @@
 
 # Declaración de un array
 letras = %w[q w e r t y]
-letras.size
+letras_2 = ['a', 'b', 'c']
+europa = %w{alemania españa francia} #format
+puts letras.size
 
 # Accediendo al contenido del arreglo
 letras[0]
 letras[1]
 letras[3] = 'X'
-letras[100]
+letras[100] # => nil
 letras[-1]
 letras[-2]
-letras[-100]
+letras[-100] # => nil
 letras[letras.size]
 letras[letras.size - 1]
 letras.methods
@@ -33,6 +35,7 @@ letras.include? 'x'
 letras.include? 'q'
 
 %w[q w e r t y].count { |x| x == 'q' }
+
 [1, 2, 3, 4].map { |x| x**2 }
 [1, 2, 3, 4].select { |x| x.even? }
 [1, 2, 3, 4].select(&:even?)
@@ -49,3 +52,7 @@ letras.include? 'q'
 'hola mundo'.split('')
 'hola mundo'.split.map { |x| x.ord }
 'hola mundo'.split.map { |x| x.upcase }.join
+
+# random
+datos = [80.5, 'hola', :mundo, [1, 2, 3]]
+puts datos
